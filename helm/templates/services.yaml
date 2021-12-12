@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: falgi
+    app.kubernetes.io/managed-by: Helm
+  name: falgi
+spec:
+  type: NodePort
+#  type: {{ .Values.servicesType }}
+  ports:
+  - port: {{ .Values.servicesPort }}
+    protocol: TCP
+    targetPort: {{ .Values.servicesPort }}
+    nodePort: 30007
+  selector:
+    app: falgi
+status:
+  loadBalancer: {}

@@ -1,0 +1,13 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  creationTimestamp: null
+  name: falgi
+spec:
+  maxReplicas: {{ .Values.replicasMax }}
+  minReplicas: {{ .Values.replicasMin }}
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: falgi
+  targetCPUUtilizationPercentage: {{ .Values.cpuUtilization }}
