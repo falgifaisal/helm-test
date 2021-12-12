@@ -24,5 +24,6 @@ git clone https://github.com/falgifaisal/helm-test
 After cloned, enter the directory and run command 
 ```
 helm install <your-helm-deployment-name> .
+Ex : helm install web .
 ```
 After run helm install, then type http://localhost:30007 from the browser to see the result
