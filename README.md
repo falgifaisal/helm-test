@@ -21,7 +21,7 @@ After all the above technologies are installed, then need to clone this reposito
 git clone https://github.com/falgifaisal/helm-test
 ```
 
-After cloned, enter the directory and run command 
+After cloned, enter the directory that already cloned (helm-test) and run command 
 ```
 helm install <your-helm-deployment-name> .
 Ex : helm install web .
